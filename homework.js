@@ -26,43 +26,39 @@ console.log(toCelsius(32))
 */
 
 
-class UserName(name, pw, email){
+class User{
+    constructor(username, password){
     // create a method on the class.
     //create properties: username, password, email, and checkPassword.
     // Set values for username, password, and email
     // Set value for checkPassword to a function.
-    this.username = name,
-    this.password = pwd,
-    this.email = email
-    this.checkPassword = function checkPassword(strong_pwd) {
-    return this.password === strong_pwd
+    this.username = username;
+    this.password = password;
+    }
+
+    changePassword(oldPassword, newPassword) {
+        if (oldPassword === this.Password) {
+            this.password = newPassword;
+            console.log("Password has been changed")
+        } else {
+            this.console.log("This is incorrect password")  
+        }
+    
     }
 
 }
 
 
 
+let user1 = new User('Daniel', 'jg4xz$#');
+let user2 = new User('Etoro', 'PPfN76@8');
 
+console.log(user1);
+console,log(user2);
 
-//class User = [
-//    {
-//        uername: 'jaxytone';
-//        password: 'jgxpwfttj'
-//    }
-//]
-//function getInfo() {
-//    var username = document.getElementById('username').value
-//    var password = document.getElementById('password').value
-    
-//    for (var i = 0; i < User.length; i++) {
-//        if (username == User[i].username && password == User[i].password) {
-//            consol.log(username + "is logged in!")
-//            window.location.href="#";
-//            return
-//        }
-//    }
-//    console.log('incorrect username or password')
-//}
+user1.changePassword('jg4xz$#23', 'zz#yt@26')
+user2.changePassword('PPfN76@8', 'QQr32p965')
+
 
 
 
@@ -79,11 +75,11 @@ class UserName(name, pw, email){
 
 
 const reNegatives = arr => {
-    arr = arr.filter(x => x < 0 && Math.round(x) == x).map(x => x * x).sort((a, b) => b - a);
+    arr = arr.filter(x => x < 0 && Math.round(x) == x).map(x => x * x)
     return arr;
 };
 
-const squareNegatives = reNegatives([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5]);
+const squareNegatives = reNegatives([-10, -3, 4, -2, 8, 9, -3]) 
 console.log(squareNegatives);
 
 
